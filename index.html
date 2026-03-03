@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chipsvergleich</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>Chipsvergleich</h1>
+      <p>Bewerte bekannte deutsche Chipssorten und finde passende Snacks schnell über Suche oder Markenmenü.</p>
+    </header>
+
+    <main>
+      <section class="controls">
+        <label for="searchInput" class="sr-only">Chipssorte oder Marke suchen</label>
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Chipssorte oder Marke suchen..."
+          autocomplete="off"
+        />
+        <nav id="brandMenu" aria-label="Markenauswahl"></nav>
+      </section>
+
+      <section class="results-header">
+        <h2 id="resultTitle">Alle bekannten Sorten</h2>
+        <p id="resultCount"></p>
+      </section>
+
+      <section id="chipsGrid" class="chips-grid" aria-live="polite"></section>
+    </main>
+
+    <template id="chipCardTemplate">
+      <article class="chip-card">
+        <img class="chip-image" alt="" loading="lazy" />
+        <div class="chip-content">
+          <span class="brand-pill"></span>
+          <h3 class="chip-name"></h3>
+          <p class="chip-description"></p>
+          <div class="rating-row">
+            <label>Deine Bewertung:</label>
+            <select class="rating-select" aria-label="Bewertung auswählen">
+              <option value="">Noch nicht bewertet</option>
+              <option value="1">1/5</option>
+              <option value="2">2/5</option>
+              <option value="3">3/5</option>
+              <option value="4">4/5</option>
+              <option value="5">5/5</option>
+            </select>
+          </div>
+          <dl class="nutrition-grid"></dl>
+        </div>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>

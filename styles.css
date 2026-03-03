@@ -1,0 +1,183 @@
+:root {
+  --bg: #fffef9;
+  --surface: #ffffff;
+  --primary: #ff7a00;
+  --primary-soft: #ffe1c6;
+  --text: #212121;
+  --muted: #626262;
+  --border: #e9e2d6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #fff8ef 0%, var(--bg) 18rem);
+}
+
+.hero {
+  padding: 2.5rem 1.25rem 1.5rem;
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+}
+
+.hero p {
+  max-width: 52rem;
+  margin: 0.9rem auto 0;
+  color: var(--muted);
+}
+
+main {
+  width: min(1100px, 94vw);
+  margin: 0 auto 3rem;
+}
+
+.controls {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+#searchInput {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 0.7rem;
+  font-size: 1rem;
+}
+
+#brandMenu {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.brand-btn {
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 999px;
+  padding: 0.45rem 0.85rem;
+  cursor: pointer;
+}
+
+.brand-btn.active {
+  border-color: var(--primary);
+  background: var(--primary-soft);
+  color: #8a3b00;
+}
+
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.2rem 0 0.7rem;
+}
+
+.results-header h2,
+.results-header p {
+  margin: 0;
+}
+
+.results-header p {
+  color: var(--muted);
+}
+
+.chips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.chip-card {
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+.chip-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  background: #f8f8f8;
+}
+
+.chip-content {
+  padding: 0.9rem;
+}
+
+.brand-pill {
+  display: inline-block;
+  background: #f4f4f4;
+  color: #444;
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.8rem;
+}
+
+.chip-name {
+  margin: 0.55rem 0 0.4rem;
+}
+
+.chip-description {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.93rem;
+}
+
+.rating-row {
+  margin-top: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.rating-select {
+  flex: 1;
+  max-width: 10rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.35rem 0.4rem;
+}
+
+.nutrition-grid {
+  margin: 0.85rem 0 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.35rem 0.65rem;
+  font-size: 0.9rem;
+}
+
+.nutrition-grid dt {
+  font-weight: 600;
+}
+
+.nutrition-grid dd {
+  margin: 0;
+  color: #4a4a4a;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
