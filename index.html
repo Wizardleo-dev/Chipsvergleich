@@ -3,24 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chipsvergleich</title>
+    <title>Chipsd – Chips bewerten</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="hero">
-      <h1>Chipsvergleich</h1>
-      <p>Bewerte bekannte deutsche Chipssorten und finde passende Snacks schnell über Suche oder Markenmenü.</p>
+      <h1>Chipsd</h1>
+      <p>Die Letterboxd-Idee für Chips: Bewerte deutsche Sorten, filtere nach Marke und vergleiche Community-Bewertungen.</p>
     </header>
 
     <main>
       <section class="controls">
         <label for="searchInput" class="sr-only">Chipssorte oder Marke suchen</label>
-        <input
-          id="searchInput"
-          type="search"
-          placeholder="Chipssorte oder Marke suchen..."
-          autocomplete="off"
-        />
+        <input id="searchInput" type="search" placeholder="Chipssorte oder Marke suchen..." autocomplete="off" />
         <nav id="brandMenu" aria-label="Markenauswahl"></nav>
       </section>
 
@@ -39,6 +34,7 @@
           <span class="brand-pill"></span>
           <h3 class="chip-name"></h3>
           <p class="chip-description"></p>
+          <p class="community-rating"></p>
           <div class="rating-row">
             <label>Deine Bewertung:</label>
             <select class="rating-select" aria-label="Bewertung auswählen">
@@ -55,6 +51,6 @@
       </article>
     </template>
 
-    <script src="app.js"></script>
+    <script type="module" src="web.js"></script>
   </body>
 </html>

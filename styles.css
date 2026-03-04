@@ -137,6 +137,13 @@ main {
   font-size: 0.93rem;
 }
 
+
+.community-rating {
+  margin: 0.65rem 0 0;
+  font-weight: 600;
+  color: #373737;
+}
+
 .rating-row {
   margin-top: 0.75rem;
   display: flex;
